@@ -1,0 +1,123 @@
+.facts {
+    position: relative;
+    overflow: hidden;
+    @include adaptiveValue("padding-top", 80, 30);
+    @include adaptiveValue("padding-bottom", 90, 30);
+    &__clip {
+        position: absolute;
+        left: 0;
+        top: 40%; 
+        opacity: .3;
+        @media (max-width: em(1260)){
+            display: none; 
+        }
+    }
+    &__clip1 {
+        position: absolute;
+        left: 0;
+        top: 60%;
+        opacity: .3;
+        @media (max-width: em(1260)){
+            display: none; 
+        }
+    }
+    &__container {
+        overflow: hidden;
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 46rem;
+        gap: 3rem;
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+        }
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+  
+    }
+
+}
+  
+  
+.facts-element {
+    &__circle {
+      --progress-stroke: #000;
+      --progress-bg-opacity: 0.3;
+  
+      position: relative;
+      margin-bottom: 1.25rem;
+      width: 9.25rem;
+      height: 9.25rem;
+  
+      svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+  
+    .progress {
+        stroke: var(--progress-stroke);
+        transform: rotate(-90deg) translateX(20px);
+        transform-origin: center;
+      }
+  
+    .progress-bg {
+        stroke: var(--progress-stroke);
+        opacity: var(--progress-bg-opacity);
+      }
+  
+      &--one-color {
+        --progress-stroke: #f89828;
+      }
+  
+      &--two-color {
+        --progress-stroke: #f52f6e;
+      }
+  
+      &--three-color {
+        --progress-stroke: #5a87fc;
+      }
+  
+      &--four-color {
+        --progress-stroke: #03cea4;
+      }
+    }
+  
+    &__value {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 130%;
+      color: $textGray;
+      transform: translate(-50%, -50%);
+    }
+  
+    &__text {
+      display: block;
+      font-size: 0.875rem;
+      line-height: 150%;
+      text-align: center;
+      color: $textGray;
+    }
+    .plus {
+        right: 5px;
+        &::before{
+            content:'+';
+            position: absolute;
+            right: -6px;
+            
+        }
+    }
+  }
+  

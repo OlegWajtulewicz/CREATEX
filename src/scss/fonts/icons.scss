@@ -1,0 +1,206 @@
+// %ic {
+// 	font-family: "icons";
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-variant: normal;
+// 	text-transform: none;
+// 	line-height: 1;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// }
+// [class*="_icon-"] {
+// 	&:before {
+// 		@extend %ic;
+// 		display: block;
+// 	}
+// }
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	//speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-logoB:before {
+    content: "\e900";
+  }
+  .icon-logoW:before {
+    content: "\e901";
+  }
+  .icon-Alert:before {
+    content: "\e902";
+  }
+  .icon-Attach:before {
+    content: "\e903";
+  }
+  .icon-Back:before {
+    content: "\e904";
+  }
+  .icon-Bell:before {
+    content: "\e905";
+  }
+  .icon-Block:before {
+    content: "\e906";
+  }
+  .icon-Calendar:before {
+    content: "\e907";
+  }
+  .icon-Cart:before {
+    content: "\e908";
+  }
+  .icon-Chat:before {
+    content: "\e909";
+  }
+  .icon-check:before {
+    content: "\e90a";
+  }
+  .icon-Check-round:before {
+    content: "\e90b";
+  }
+  .icon-Clock:before {
+    content: "\e90c";
+  }
+  .icon-Comment:before {
+    content: "\e90d";
+  }
+  .icon-Cross:before {
+    content: "\e90e";
+  }
+  .icon-danger:before {
+    content: "\e90f";
+  }
+  .icon-Envelope-opened:before {
+    content: "\e910";
+  }
+  .icon-Mail:before {
+    content: "\e911";
+  }
+  .icon-Facebook:before {
+    content: "\e912";
+  }
+  .icon-Files:before {
+    content: "\e913";
+  }
+  .icon-Heart:before {
+    content: "\e914";
+  }
+  .icon-History:before {
+    content: "\e915";
+  }
+  .icon-Home:before {
+    content: "\e916";
+  }
+  .icon-Horizontal:before {
+    content: "\e917";
+  }
+  .icon-Info:before {
+    content: "\e918";
+  }
+  .icon-Instagram:before {
+    content: "\e919";
+  }
+  .icon-Instagram-filled:before {
+    content: "\e91a";
+  }
+  .icon-iPhone:before {
+    content: "\e91b";
+  }
+  .icon-Layouts:before {
+    content: "\e91c";
+  }
+  .icon-Linked-In:before {
+    content: "\e91d";
+  }
+  .icon-Login:before {
+    content: "\e91e";
+  }
+  .icon-External-Link:before {
+    content: "\e91f";
+  }
+  .icon-Upload:before {
+    content: "\e920";
+  }
+  .icon-Mark:before {
+    content: "\e921";
+  }
+  .icon-Mention:before {
+    content: "\e922";
+  }
+  .icon-mic:before {
+    content: "\e923";
+  }
+  .icon-Minus:before {
+    content: "\e924";
+  }
+  .icon-Minus-round:before {
+    content: "\e925";
+  }
+  .icon-off:before {
+    content: "\e926";
+  }
+  .icon-on:before {
+    content: "\e927";
+  }
+  .icon-solid:before {
+    content: "\e928";
+  }
+  .icon-outline:before {
+    content: "\e929";
+  }
+  .icon-Play:before {
+    content: "\e92a";
+  }
+  .icon-Plus:before {
+    content: "\e92b";
+  }
+  .icon-Plus-round:before {
+    content: "\e92c";
+  }
+  .icon-Profile:before {
+    content: "\e92d";
+  }
+  .icon-Right:before {
+    content: "\e92e";
+  }
+  .icon-Right-chevron:before {
+    content: "\e92f";
+  }
+  .icon-search:before {
+    content: "\e930";
+  }
+  .icon-Share:before {
+    content: "\e931";
+  }
+  .icon-Star:before {
+    content: "\e932";
+  }
+  .icon-Twitter:before {
+    content: "\e933";
+  }
+  .icon-YouTube:before {
+    content: "\e934";
+  }
+  .icon-braces:before {
+    content: "\e935";
+  }
+  .icon-playBtnlarge .path1:before {
+    content: "\e936";
+    color: rgb(119, 114, 241);
+  }
+  .icon-playBtnlarge .path2:before {
+    content: "\e937";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-playBtnsmall:before {
+    content: "\e938";
+  }
+  

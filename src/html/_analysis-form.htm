@@ -1,0 +1,52 @@
+<section class="analysis-form">
+    <div class="analysis-form__container">
+        <div class="analysis-form__image">
+            <img src="@img/analysis/01.png" alt="image">
+        </div>
+        <div class="analysis-form__body">
+            <div class="analysis-form__spoller">
+                <div data-spollers="479.98" class="analysis-form__spollers">
+					<div class="analysis-form__body-spollers">
+		
+					<button type="button" data-spoller class="analysis-form__title title-section icon-Right-chevron">Get a Free SEO Analysis!</button>
+					
+						<form  data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form">
+                            <div class="form-form">
+
+                            
+							<div class="form__item">
+                                <label for="name" class="form__label">Name</label>
+                                <input type="text" id="name" name="name"  placeholder="Your name" class="form__input input  _req" required> 
+                            </div>
+
+
+                            <div class="form__item">
+                                <label for="email" class="form__label">Email</label>
+                                <input id="email" type="email" name="email" placeholder="Your working email" class="form__input input _req" required>
+                            </div>
+                            
+            
+                            <div class="form__item long" data-error="Error">
+                                <label for="url" class="form__label">Your website URL</label>
+                                <input type="url" name="url" id="url"  placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input _req" required/>
+                            </div>
+
+							<div class="checkbox-form__body ">
+								<label class="form__checkbox checkbox-form">
+									<input type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req" required>
+									<span class="checkbox-form__text">I agree to receive communications from Createx SEO Agency</span>
+								</label>
+								<button class="checkbox-form__button button">Get a free analysis</button>
+							</div>
+                        </div>
+						</form>
+                        
+					
+					</div>
+				</div> 
+            </div>
+           
+
+        </div>
+    </div>
+</section>

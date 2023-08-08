@@ -274,7 +274,7 @@ export let bodyLock = (delay = 500) => {
 // 				}
 // 				e.preventDefault();
 // 			}
-// 			// Закриття при кліку поза спойлером
+// // 			// Закриття при кліку поза спойлером
 // 			if (!el.closest('[data-spollers]')) {
 // 				const spollersClose = document.querySelectorAll('[data-spoller-close]');
 // 				if (spollersClose.length) {
@@ -290,7 +290,7 @@ export let bodyLock = (delay = 500) => {
 // 					});
 // 				}
 // 			}
-// 		}
+//		}
 // 		function hideSpollersBody(spollersBlock) {
 // 			const spollerActiveBlock = spollersBlock.querySelector('details[open]');
 // 			if (spollerActiveBlock && !spollersBlock.querySelectorAll('._slide').length) {
@@ -403,6 +403,22 @@ export function spollers() {
 					_slideToggle(spollerTitle.nextElementSibling, 500);
 				}
 				e.preventDefault();
+			}
+			// Закриття при кліку поза спойлером
+			if (!el.closest('[data-spollers]')) {
+				const spollersClose = document.querySelectorAll('[data-spoller-close]');
+				if (spollersClose.length) {
+					spollersClose.forEach(spollerClose => {
+						const spollersBlock = spollerClose.closest('[data-spollers]');
+						const spollerCloseBlock = spollerClose.parentNode;
+						if (spollersBlock.classList.contains('_spoller-init')) {
+							const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+							spollerClose.classList.remove('_spoller-active');
+							_slideUp(spollerClose.nextElementSibling, spollerSpeed);
+							setTimeout(() => { spollerCloseBlock.open = false }, spollerSpeed);
+						}
+					});
+				}
 			}
 		}
 		function hideSpollersBody(spollersBlock) {
@@ -862,7 +878,7 @@ export function dataMediaQueries(array, dataSetValue) {
 }
 //================================================================================================================================================================================================================================================================================================================
 
-
+// PROGRESS ===============================================================
 
 const circles = document.querySelectorAll('.facts-element__circle');
 
@@ -895,3 +911,5 @@ circles.forEach(el => {
     }
   }
 });
+
+//=========================================================================================== 

@@ -118,6 +118,9 @@
 				text-shadow: -0.125rem 0.0625rem 0.8125rem rgba(255, 255, 255, 0.91);
 			}
 		}
+		&.active {
+			opacity: 1;
+		}
 	}
 	&__spoller {
 		width: rem(83);

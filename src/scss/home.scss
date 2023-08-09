@@ -620,14 +620,20 @@
     &__body {
         &-spollers {
             width: 100%;
+            summary::marker {
+                font-size: 0;
+            }
         }
     }
     &__title {
         color:  #FFF;
         font-family: $fontFamily !important;
+        @media (min-width: $mobileSmall) {
+            pointer-events: none;  
+        }
         &::before {
             display: none;
-            @media (max-width:$mobileSmall){
+            @media (max-width:$mobileSmall) {
                 display: block; 
                 font-family: 'icomoon' !important;
                 font-size: rem(20);
@@ -657,13 +663,21 @@
             width: 100%;
             align-items: center;
         }
-        @media (min-width: $mobileSmall) {
-            pointer-events: none;
+        @media (max-width: $mobileSmall) {
+            cursor: pointer;
         }
     }
     
 }
 
+//============ удаление ::marker у spoller =======================================
+.analysis-form__body-spollers summary::marker {
+    font-size: 0;
+}
+details summary::-webkit-details-marker {  
+    display: none;
+}
+//=========================================================================
 .form {
 
     &-form {
@@ -895,6 +909,10 @@
         gap: rem(20);
         font-family: $fontFamily !important;
         transition: all 0.3s ease 0s;
+        cursor: pointer;
+        summary::marker {
+			display: none;
+		}
         &::before{
             font-family: 'icomoon' !important;
             color: $primary;

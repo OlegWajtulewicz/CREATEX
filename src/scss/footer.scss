@@ -1,3 +1,231 @@
 //====================================================================================================
+.footer {
+    @include adaptiveValue("padding-top", 80, 30);
+
+    background: $mainColor;
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+    }
+}
+.body-footer {
+    @include adaptiveValue("padding-bottom", 60, 20);
+    // .body-footer__row
+
+    &__row {
+        //display: grid;
+        //grid-template-columns: repeat(5, 1fr);
+        //grid-template-columns: minmax(286px 1fr);
+        column-gap: rem(80);
+        @include adaptiveValue("column-gap", 80, -80);
+        display: flex;
+    }
+
+    // .body-footer__item
+
+    &__item {
+    }
+}
+.item-footer {
+    color: #FFF;
+
+    // .item-footer__logo
+
+    &__logo {
+        
+    }
+    &__spollers {
+        display: grid;
+        //grid-template-columns: repeat(2, 1fr);
+        //column-gap: rem(80);
+        summary::marker {
+            display: none;
+            font-size: 0;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        line-height: 150%; /* 24px */
+        letter-spacing: 1px;
+        @media (min-width: $mobile) {
+            &::before{
+                display: none;
+                
+            }
+        }
+    }
+
+    // .item-footer__company
+
+    &__company {
+    }
+
+    // .item-footer__contact
+
+    &__contact {
+    }
+
+    // .item-footer__newsletter
+
+    &__newsletter {
+    }
+}
+.logo-footer {
+    width: rem(280);
+        
+    
+    // .logo-footer__link
+
+    &__link {
+        margin-bottom: rem(24);
+        svg {
+            width: 130px;
+            height: 22px;
+            @include adaptiveValue("margin-bottom", 24, 12);
+        }
+    }
+
+    // .logo-footer__descr
+
+    &__descr {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%; /* 18px */
+        @include adaptiveValue("margin-bottom", 38, 20);
+        opacity: .6;
+    }
+
+    // .logo-footer__social
+
+    &__social {
+        opacity: .6;
+    }
+}
+.social-footer {
+    display: flex;
+    gap: rem(20);
+    // .social-footer__link
+
+    &__link {
+        &::before{
+            font-family: 'icomoon' !important;
+            font-size: rem(24);
+            
+        }
+    }
+}
+
+.company-spoller {
+
+    // .company-spoller__item
+
+    &__item {
+    }
+
+    // .company-spoller__title
+
+    &__title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-family: $fontFamily !important;
+        font-weight: 700;
+        color: #fff;
+        line-height: 150%; /* 24px */
+        letter-spacing: 1px;
+        &::before{
+            font-family: 'icomoon' !important;
+            color: #fff;
+            opacity: 1;
+        }
+    }
+
+    // .company-spoller__body
+
+    &__body {
+    }
+}
+
+.menu-footer {
+
+    // .menu-footer__list
+
+    &__list {
+        padding-top: rem(12);
+    }
+
+    // .menu-footer__item
+
+    &__item {
+    }
+
+    // .menu-footer__link
+
+    &__link {
+        color: #fff;
+        opacity: 0.6;
+        line-height: 160%; /* 25.6px */
+        &::before{
+            font-family: 'icomoon' !important;
+            font-size: rem(16);
+            margin-right: rem(8);
+        }
+    }
+}
+
+.newsletter-item {
+
+    // .newsletter-item__body
+
+    &__body {
+    }
+
+    // .newsletter-item__line
+
+    &__line {
+        padding: rem(24) rem(0) rem(12) rem(0);
+        position: relative;
+        transition: all .3s ease 0s;
+        .form__error {
+            color: red;
+            font-family: $fontFamily;
+            font-size: rem(14);
+            padding: rem(5) rem(0) rem(0) rem(5);
+        }
+    }
+
+    // .newsletter-item__input
+
+    &__input {
+        padding: rem(9) rem(12);
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 150%; /* 18px */
+        border-radius: 0.25rem;
+        border: 0.0625rem solid rgba(255, 255, 255, 0.20);
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+    }
+
+    // .newsletter-item__button
+
+    &__button {
+        position: absolute;
+        right: 1px;
+        top: 25px;
+        padding: rem(10) rem(10);
+    }
+    &__descr {
+        font-size: 10px;
+        line-height: 150%; /* 15px */
+        //padding-top: 20px;
+    }
+}
+
 
 //====================================================================================================

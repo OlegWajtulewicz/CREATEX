@@ -123,7 +123,7 @@
 		}
 	}
 	&__spoller {
-		width: rem(83);
+		//width: rem(83);
 	}
 }
 
@@ -132,6 +132,10 @@
 	// .spoller-menu__item
 	&__item {
 		position: relative;
+		summary::marker {
+			display: none;
+		}
+		
 	}
 
 	// .spoller-menu__title
@@ -177,7 +181,7 @@
 		position: absolute;
 		top: 100%;
 		//width: 100%;
-		width: rem(190);
+		width: rem(230);
 		left: rem(-5);
 		padding: rem(10) rem(5) rem(5) rem(5);
 		margin: rem(8) rem(0) rem(0) rem(0);

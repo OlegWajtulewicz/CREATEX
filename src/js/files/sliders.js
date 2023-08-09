@@ -47,9 +47,10 @@ function initSliders() {
 		new Swiper('.case-studies-slider__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [ Navigation ],
 			observer: true,
 			observeParents: true,
+			watchOverflow: true,
 			slidesPerView: 3,
 			spaceBetween: 30,
 			autoHeight: true,
@@ -131,7 +132,9 @@ function initSliders() {
 			*/
 			// Події
 			on: {
-				
+				//afterInit: () => {
+				//	this.slideTo(0);
+				//},
 			}
 		});
 		
@@ -168,6 +171,35 @@ function initSliders() {
 			},
 		})
 	} 
+	if (document.querySelector('.testimonials__slider')) {
+		new Swiper('.testimonials__slider', {
+			modules: [ Navigation ],
+			slidesPerView: 1,
+			spaceBetween: 30,
+			observer: true,
+			observeParents: true,
+			autoHeight: true,
+			speed: 500,
+			loop: true,
+			navigation: {
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next',
+			},
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+				},
+				730: {
+					spaceBetween: 20,
+				},
+				
+				1080: {
+					spaceBetween: 30,
+				},
+				
+			},
+		})
+	}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

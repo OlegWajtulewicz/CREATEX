@@ -3,24 +3,7 @@
     overflow: hidden;
     @include adaptiveValue("padding-top", 80, 30);
     @include adaptiveValue("padding-bottom", 90, 30);
-    &__clip {
-        position: absolute;
-        left: 0;
-        top: 40%; 
-        opacity: .3;
-        @media (max-width: em(1260)){
-            display: none; 
-        }
-    }
-    &__clip1 {
-        position: absolute;
-        left: 0;
-        top: 60%;
-        opacity: .3;
-        @media (max-width: em(1260)){
-            display: none; 
-        }
-    }
+   
     &__container {
         overflow: hidden;
     }

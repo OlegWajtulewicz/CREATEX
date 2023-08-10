@@ -180,9 +180,85 @@ body {
 
     &__main-block {
     }
-
+	&__team {
+		position: relative;
+		&::before {
+			content:'';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-75%);
+			top: 0;
+			width: 70.625rem;
+			height: 48.9375rem;
+			flex-shrink: 0;
+			background-image: url('@img/team/bg.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 0;
+			
+	  
+		}
+	}
 	&__questions-btn {
     }
 	&__our-benefits {
+		position: relative;
+		&::before {
+			content:'';
+			position: absolute;
+			left: 0;
+			bottom: -16.875rem;
+			width: 12.5rem;
+			height: 32.8125rem;
+			flex-shrink: 0;
+			background-image: url('@img/main-bg/linesL1.png');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media (max-width: rem(1220)){
+				  display: none;
+			}
+	  
+		}
+		&::after {
+			content:'';
+			position: absolute;
+			right: 0;
+			bottom: -55.625rem;
+			width: 44.375rem;
+			height: 84.8125rem;
+			flex-shrink: 0;
+			background-image: url('@img/main-bg/linesR1big.png');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media (max-width: rem(1220)){
+				  display: none;
+			}
+	  
+		}
     }
+	&__our-services {
+		position: relative;
+		&::before {
+			content:'';
+			position: absolute;
+			left: 0;
+			top: -13.75rem;
+			width: 10.9375rem;
+			height: 30.2116rem;
+			flex-shrink: 0;
+			background-image: url('@img/main-bg/shapesL.png');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -1;
+			@media (max-width: rem(1220)){
+				  display: none;
+			}
+	  
+		}
+	}
 }

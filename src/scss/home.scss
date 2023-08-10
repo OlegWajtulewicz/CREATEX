@@ -1,10 +1,7 @@
 //====================================================================================================
 .main-block {
     background: url('@img/promo/bg.jpg') center / cover no-repeat;
-    //max-width: rem(1920);
-    //margin: 0 auto;
-    // .main-block__container
-    //height: 1080px;
+ 
     
     &__container {
         @include adaptiveValue("padding-top", 272, 110);
@@ -144,8 +141,12 @@
         position: relative;
         &:not(:last-child) {
             @include adaptiveValue("padding-right", 94, -130);
-            border-right: 1px solid;
-            border-color: rgba(218, 219, 221, 0.274);
+            border-right: 1px solid rgba(218, 219, 221, 0.50);
+            border-image: linear-gradient(0deg, rgba(218, 219, 221, 0.40) 2%,
+                                             rgba(218, 219, 221, 0.50) 12.33%,
+                             #DADBDD 51.91%, rgba(218, 219, 221, 0.50) 78.85%,
+                                                 rgba(218, 219, 221, 0.40) 100%);
+            border-image-slice: 1;
             @media (max-width: $tablet) {
                 border: none;
             }
@@ -159,6 +160,10 @@
     &__icon {
         width: 2.5rem;
         height: 2.5rem;
+        svg {
+            width: 2.5rem;
+            height: 2.5rem; 
+        }
     }
 
     // .advantages-main__text
@@ -199,7 +204,6 @@
         @include adaptiveValue("font-size", 28, 18);
         font-weight: 700;
         line-height: math.div( 42, 28);
-        //line-height: 150%; /* 42px */
     }
 
 }
@@ -266,9 +270,6 @@
 .team {
     @include adaptiveValue("padding-top", 130, 30);
     @include adaptiveValue("padding-bottom", 90, 30);
-    background-image: url('@img/team/bg.jpg');
-    background-position-x: 33%;
-    background-repeat: no-repeat;
     &__container {
         display: grid;
         grid-template-columns: 1fr percent(705, 1260);
@@ -284,6 +285,7 @@
     // .team__info
 
     &__info {
+        z-index: 1;
         @media (max-width: $tablet) {
             justify-items: center;
             text-align: center;
@@ -424,10 +426,7 @@
     // .content-tabs__info
 
     &__info {
-        //max-width: rem(390);
-        @media (max-width: $tablet) {
-            //width: 100%;
-        }
+        
     }
 
     // .content-tabs__title
@@ -500,7 +499,6 @@
             background-image: url('@img/services/followers-top.png');
             width: 60.4912px;
             height: 45.6128px;
-            
             z-index: 1;
         }
         &::after {
@@ -538,11 +536,8 @@
             content:'';
             position: absolute;
             bottom: rem(55);
-            //background-image: url('@img/services/youtube.png');
             @include adaptiveValue("width", 43, 35);
             @include adaptiveValue("height", 37, 30);
-            //width: 43px;
-            //height: 37px;
             left: 27%;
             transform: translateX(50%);
             z-index: 1;
@@ -550,9 +545,7 @@
                 bottom: -1.25rem;
                 left: 28%;
             }
-            @media (max-width:$mobileSmall){
-                //display: none; 
-            }
+            
         }
     }
     &__link {
@@ -571,9 +564,7 @@
             bottom: -2.5rem;
             right: -2.5rem;  
         }
-        @media (max-width: $mobileSmall) {
-              
-        }
+        
     }
     // .media-content__image
 
@@ -581,7 +572,6 @@
         position: absolute;
         top: 0;
         img {
-            //width: 100%;
             height: 100%;
             @media (max-width: em(1210)) {
                 max-width: 100%; 
@@ -804,9 +794,27 @@ details summary::-webkit-details-marker {
 
 
 .questions-btn {
+    position: relative;
     @include adaptiveValue("padding-top", 180, 40);
     @include adaptiveValue("padding-bottom", 120, 30);
+    &::before {
+        content:'';
+        position: absolute;
+        left: 0;
+        top: rem(-75);
+        width: 23.7556rem;
+        height: 32.1026rem;
+        flex-shrink: 0;
+        background-image: url('@img/main-bg/linesL.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        @media (max-width: rem(1250)){
+              display: none;
+        }
 
+    }
     &__container {
         display: grid;
         grid-template-columns: 1fr percent(490, 1230);
@@ -1067,6 +1075,7 @@ details summary::-webkit-details-marker {
     &__items {
         display: grid;
         gap: rem(24);
+        
     }
 
     // .left-wrapper__item
@@ -1078,6 +1087,7 @@ details summary::-webkit-details-marker {
         @include adaptiveValue("padding-right", 35, 10);
         text-align: center;
         border-radius: 0.25rem;
+        z-index: 1;
         border: 0.0625rem solid var(--gray-300, #E5E8ED);
         background: var(--white, #FFF);
         transition: box-shadow .3s ease 0s;

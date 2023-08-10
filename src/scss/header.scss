@@ -75,7 +75,6 @@
 //=============================================
 .menu-top-header {
 	display: flex;
-	//color: #ffffff;
 	
 	// .menu-top-header__list
 	transition: all .3s ease 0s;
@@ -134,6 +133,7 @@
 		position: relative;
 		summary::marker {
 			display: none;
+			font-size: 0;
 		}
 		
 	}
@@ -151,6 +151,7 @@
 		transition: all 0.3s ease 0s;
 		color: #ffffff;
 		opacity: .6;
+		cursor: pointer;
 		&::before {
 			font-family: 'icomoon' !important;
 			transform: rotate(90deg);

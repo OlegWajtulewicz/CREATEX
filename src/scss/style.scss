@@ -216,8 +216,8 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: -1;
-			@media (max-width: rem(1220)){
-				  display: none;
+			@media (max-width: rem(1630)){
+				left: calc((40% - 655px)/ 1);
 			}
 	  
 		}
@@ -225,7 +225,7 @@ body {
 			content:'';
 			position: absolute;
 			right: 0;
-			bottom: -55.625rem;
+			bottom: -57.625rem;
 			width: 44.375rem;
 			height: 84.8125rem;
 			flex-shrink: 0;
@@ -234,8 +234,8 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: -1;
-			@media (max-width: rem(1220)){
-				  display: none;
+			@media (max-width: rem(1830)){
+				right: calc((40% - 735px)/ 1);
 			}
 	  
 		}
@@ -255,8 +255,8 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: -1;
-			@media (max-width: rem(1220)){
-				  display: none;
+			@media (max-width: rem(1630)){
+				left: calc((40% - 655px)/ 1);
 			}
 	  
 		}

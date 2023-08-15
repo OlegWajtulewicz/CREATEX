@@ -4,6 +4,12 @@
 	"title":"HomePage"
 	})
 	<body>
+		<!-- <div class="preloader">
+			<div class="loader-bg">
+				<img src="@img/svgcomponents/logoW.svg" alt="logo">
+			</div>
+		</div> -->
+		
 		<div class="wrapper" >
 			@@include('html/_header.htm',{})
 			<main class="page page_home">
@@ -30,7 +36,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="main-block__advantages advantages-main lifting animation nth-increment">
+						<div class="main-block__advantages advantages-main sliding-left_full-sliding animation nth-increment">
 							<div class="advantages-main__item">
 								<div class="advantages-main__icon">
 									<svg>
@@ -128,10 +134,10 @@
 				<section  class="page__questions-btn questions-btn">
 					<div class="questions-btn__container">
 						<div class="questions-btn__body">
-							<h2 class="questions-btn__title title-section">Freequently Ask Questions</h2>
+							<h2 class="questions-btn__title title-section lifting animation nth-increment">Freequently Ask Questions</h2>
 							<div class="questions-btn__spollers-body">
 								<div data-spollers class="questions-btn__spoller spoller-questions-btn">
-									<details class="spoller-questions-btn__body">
+									<details class="spoller-questions-btn__body lifting animation nth-increment">
 										<summary data-spoller class="spoller-questions-btn__title icon-Plus">Aliquet lectus urna viverra in odio?</summary>
 										<div class="spoller-questions-btn__item">
 											Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.
@@ -139,7 +145,7 @@
 									</details>
 								</div>
 								<div data-spollers class="questions-btn__spoller spoller-questions-btn">
-									<details class="spoller-questions-btn__body">
+									<details class="spoller-questions-btn__body lifting animation nth-increment">
 										<summary data-spoller class="spoller-questions-btn__title icon-Plus">Orci commodo, viverra orci mollis ut euismod?</summary>
 										<div class="spoller-questions-btn__item">
 										<p>	Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.</p>
@@ -148,7 +154,7 @@
 									</details>
 								</div>
 								<div data-spollers class="questions-btn__spoller spoller-questions-btn">
-									<details class="spoller-questions-btn__body">
+									<details class="spoller-questions-btn__body lifting animation nth-increment">
 										<summary data-spoller class="spoller-questions-btn__title icon-Plus">Sagittis vitae facilisi rutrum amet mauris quisque vel convallis?</summary>
 										<div class="spoller-questions-btn__item">
 	Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.
@@ -156,7 +162,7 @@
 									</details>
 								</div>
 								<div data-spollers class="questions-btn__spoller spoller-questions-btn">
-									<details class="spoller-questions-btn__body">
+									<details class="spoller-questions-btn__body lifting animation nth-increment">
 										<summary data-spoller class="spoller-questions-btn__title icon-Plus">In id dolor quis nunc, urna hendrerit pharetra?</summary>
 										<div class="spoller-questions-btn__item">
 	Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet elementum faucibus dignissim purus. Fusce parturient diam magna ullamcorper morbi semper massa ac facilisis.
@@ -164,20 +170,20 @@
 									</details>
 								</div>
 							</div>
-							<a href="#" class="questions-btn__button button icon-Right">Discover more</a>
+							<a href="#" class="questions-btn__button button icon-Right lifting animation nth-increment">Discover more</a>
 							
 						</div>
-						<div class="questions-btn__image">
+						<div class="questions-btn__image sliding-right animation">
 							<img src="@img/questions/01.png" alt="image">
 						</div>
 					</div>
 				</section>
 				@@include('html/_case-studies-slider.htm',{})
 				<section  class="page__our-benefits our-benefits"> 
-					<div class="our-benefits__container">
-						<h2 class="our-benefits__title title-section">Our benefits</h2>
+					<div class="our-benefits__container nth-phase-increment">
+						<h2 class="our-benefits__title title-section lifting animation">Our benefits</h2>
 						<div class="our-benefits__body">
-							<div class="our-benefits__left-wrapper left-wrapper">
+							<div class="our-benefits__left-wrapper left-wrapper sliding-left animation">
 								<div class="left-wrapper__items">
 
 								<div class="left-wrapper__item">
@@ -218,10 +224,10 @@
 									</div>
 							</div>
 						</div>
-						<div class="our-benefits__image">
+						<div class="our-benefits__image scale animation ">
 							<img src="@img/benefits/im1.png" alt="">
 						</div>
-						<div class="our-benefits__right-wrapper right-wrapper">
+						<div class="our-benefits__right-wrapper right-wrapper animation sliding-right">
 							<div class="right-wrapper__items">
 
 							<div class="right-wrapper__item">
@@ -272,6 +278,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+		@@include('html/_preloader.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

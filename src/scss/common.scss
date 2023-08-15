@@ -27,6 +27,43 @@
         
     }
 }
+//==================================================================================
+// .preloader {
+//     position: fixed;
+//     z-index: 100;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #c8c8e4;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 1.25rem;
+//     transition: all 0.7s;
+
+// }
+// .loader-bg {
+//     img {
+//         width: rem(500);
+//         @media (max-width: $mobile) {
+//             width: rem(300);
+//         }
+//         @media (max-width: $mobileSmall) {
+//             width: rem(300); 
+//         }
+//     }
+    
+// }
+.loaded .loader-bg {
+    opacity: 0;
+    visibility: hidden;
+}
+.loaded .preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 //======================================================================
 
@@ -843,10 +880,10 @@
     &__container {
         display: grid;
         grid-template-columns: rem(285) 1fr;
-        @include adaptiveValue("gap", 135, -250);
+        @include adaptiveValue("column-gap", 135, -250);
         @media (max-width: rem(1090)) {
             grid-template-columns: 1fr;
-            row-gap: rem(30);
+            gap: rem(30);
         }
     }
 
@@ -988,7 +1025,14 @@
     span {
         @include adaptiveValue("margin-right", 12, 2);
         @include adaptiveValue("margin-left", 12, 2);
-        
+    }
+    a {
+        transition: color .3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: #504AED; 
+            }
+        }
     }
     // .row-item__tag
     
@@ -1020,24 +1064,32 @@
 }
 
 //===== animation ========================================================================================= 
+.scale {
+    transform: scale(0);
+    transition: all 0.6s; 
+}
 
 .sliding-right {
     opacity: 0;
-    transform: translate(5rem, 0);
+    transform: translate(80px, 0);
     transition: all 0.6s;
 }
-.sliding-right_full-sliding {
-    transform: translate(50%, 0);
-    opacity: 0;
+
+@media (min-width: $mobile) {
+    .sliding-right_full-sliding {
+        transform: translate(50%, 0);
+        transition: all 0.6s;
+        opacity: 0;
+    } 
 }
 .sliding-left_full-sliding {
-    transform: translate(-75%, 0);
+    transform: translate(-50%, 0);
     transition: all 0.6s;
     opacity: 0;
 }
 .sliding-left {
     opacity: 0;
-    transform: translate(-50%, 0);
+    transform: translate(-80px, 0);
     transition: all 0.3s;
 }
 .lifting {
@@ -1050,6 +1102,37 @@
     transition: all 0.6s ease-in-out .4s;
     opacity: 0;
 }
+
+.stats-info {
+    transform: translate(0, 170px);
+    opacity: 0;
+}
+.observed {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.6s; 
+}
+.lifting.observed {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.sliding-right.observed {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.sliding-right_full-sliding.observed {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.sliding-left.observed {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+.scale.observed {
+    transform: scale(1);
+}
 .nth-increment:nth-child(2) {
     transition-delay: 0.2s;
 }
@@ -1059,16 +1142,105 @@
 .nth-increment:nth-child(4) {
     transition-delay: 0.4s;
 }
-.stats-info {
-    transform: translate(0, 170px);
-    opacity: 0;
+.nth-increment:nth-child(5) {
+    transition-delay: 0.5s;
 }
-.observed {
-    opacity: 1 !important;
-    transform: translate(0, 0) !important; 
+.nth-increment:nth-child(6) {
+    transition-delay: 0.6s;
 }
 
 //================================================================================= 
+// .lifting {
+//     opacity: 0;
+//     transform: translate(0, 2.5rem);
+//     transition: all 0.3s;
+//   }
+//   @media (max-width: 47.99875em) {
+//     .lifting {
+//       transition: all 0.5s;
+//     }
+//   }
+//   .lifting_big {
+//     transition: all 0.5s;
+//   }
+//   @media (max-width: 47.99875em) {
+//     .lifting_big {
+//       transition: all 0.8s;
+//     }
+//   }
+//   .lifting.observed {
+//     opacity: 1;
+//     transform: translate(0, 0);
+//   }
+  
+//   .sliding-right {
+//     opacity: 0;
+//     transform: translate(5rem, 0);
+//     transition: all 0.6s;
+//   }
+// //   .sliding-right_full-sliding {
+// //     transform: translate(50%, 0);
+// //   }
 
+  
+//   .sliding-left {
+//     opacity: 0;
+//     transform: translate(-5rem, 0);
+//     transition: all 0.6s;
+//   }
 
+  
+//   .nth-increment:nth-child(1) {
+//     transition-delay: 0.1s;
+//   }
+//   .nth-increment:nth-child(2) {
+//     transition-delay: 0.2s;
+//   }
+//   .nth-increment:nth-child(3) {
+//     transition-delay: 0.3s;
+//   }
+//   .nth-increment:nth-child(4) {
+//     transition-delay: 0.4s;
+//   }
+//   .nth-increment:nth-child(5) {
+//     transition-delay: 0.5s;
+//   }
+//   @media (max-width: 36.74875em) {
+//     .nth-increment_big:nth-child(n) {
+//       transition-delay: 0s;
+//     }
+//   }
+  
+//   .nth-phase-increment:nth-child(odd) .nth-phase-increment-child {
+//     transition-delay: 0.1s;
+//   }
+//   .nth-phase-increment:nth-child(even) .nth-phase-increment-child {
+//     transition-delay: 0.3s;
+//   }
+//   @media (min-width: 49.125em) {
+//     .nth-phase-increment:nth-child(3n+1) .nth-phase-increment-child {
+//       transition-delay: 0.1s;
+//     }
+//     .nth-phase-increment:nth-child(3n+2) .nth-phase-increment-child {
+//       transition-delay: 0.3s;
+//     }
+//     .nth-phase-increment:nth-child(3n+3) .nth-phase-increment-child {
+//       transition-delay: 0.5s;
+//     }
+//   }
+//   @media (min-width: 68.75em) {
+//     .nth-phase-increment:nth-child(4n+1) .nth-phase-increment-child {
+//       transition-delay: 0.1s;
+//     }
+//     .nth-phase-increment:nth-child(4n+2) .nth-phase-increment-child {
+//       transition-delay: 0.3s;
+//     }
+//     .nth-phase-increment:nth-child(4n+3) .nth-phase-increment-child {
+//       transition-delay: 0.5s;
+//     }
+//     .nth-phase-increment:nth-child(4n+4) .nth-phase-increment-child {
+//       transition-delay: 0.7s;
+//     }
+//   }
+  
 

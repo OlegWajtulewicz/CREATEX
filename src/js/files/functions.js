@@ -825,8 +825,8 @@ const btnUp = {
 	},
 	addEventListener() {
 	  window.addEventListener('scroll', () => {
-		const scrollY = window.scrollY || document.documentElement.scrollTop;
-		if (this.scrolling && scrollY > 0) {
+		const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+		if (this.scrolling && pageYOffset > 0) {
 		  return;
 		}
 		this.scrolling = false;
@@ -915,3 +915,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(setupIntersectionObserver, 500);
 });
+
+//================================================================================ 
+const menuLinks = document.querySelectorAll('nav ul li a summary');
+
+function showActivePunkt() {
+    const currentPathname = window.location.pathname;
+
+    menuLinks.forEach(menuLink => {
+        const navLinkPathname = new URL(menuLink.href).pathname;
+
+        if (currentPathname === navLinkPathname) {
+            menuLink.classList.add("active");
+        } else {
+            menuLink.classList.remove("active");
+        }
+    });
+}
+
+showActivePunkt(); // Вызов функции при загрузке страницы
+
+window.addEventListener('scroll', showActivePunkt); // Добавляем обработчик события прокрутки

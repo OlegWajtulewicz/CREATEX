@@ -3,7 +3,7 @@
     overflow: hidden;
     @include adaptiveValue("padding-top", 80, 30);
     @include adaptiveValue("padding-bottom", 90, 30);
-   
+	
     &__container {
         overflow: hidden;
     }
@@ -102,5 +102,5 @@
             
         }
     }
-  }
+}
   

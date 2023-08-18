@@ -239,14 +239,16 @@
     // .menu-footer__link
 
     &__link {
-        color: #fff;
-        opacity: 0.6;
+        color: $textOpacity;
         line-height: 160%; /* 25.6px */
         transition: all .3s ease 0s;
+        font-family: $fontFamily !important;
         &::before{
             font-family: 'icomoon' !important;
             font-size: rem(16);
             margin-right: rem(8);
+            opacity: 1;
+            color:#FFF;
         }
         @media (any-hover: hover) {
 			&:hover {
@@ -254,6 +256,10 @@
 				text-shadow: -0.125rem 0.0625rem 0.8125rem rgba(255, 255, 255, 0.91);
 			}
 		}
+    }
+    .mobile {
+        font-size: 1.25rem;
+        font-weight: 600;
     }
 }
 
@@ -333,7 +339,13 @@
     // .awards-footer__link
 
     &__link {
-        pointer-events: none;
+        //pointer-events: none;
+        width: 7.5rem;
+        height: 2.5rem;
+        img {
+            width: 7.5rem;
+            height: 2.5rem;
+        }
     }
 }
 .copy-footer {
@@ -361,14 +373,7 @@
 }
 
 //============================ btn-up ============================================================
-.footer-foot {
 
-    // .footer-foot__container
-
-    &__container {
-        
-    }
-}
 .container-footer-foot {
     position: relative;
     // .container-footer-foot__body
@@ -428,6 +433,14 @@
             width: 40px;
             height: 40px;
             fill: currentcolor;
+            border: 1px solid #fff;
+            border-radius: rem(4);
+            transition: all .3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    border: 1px solid #ffffff00;
+                }
+            }
         }
         .btn-up_hiding {
             opacity: 0;

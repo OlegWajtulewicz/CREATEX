@@ -36,6 +36,7 @@ $circleSuccess: #03CEA4;
 
 $likeRed : #FC5A5A;
 
+$textOpacity: #ffffff99;
 
 
 // Палітра кольорів
@@ -239,7 +240,6 @@ body {
 			@media (max-width: rem(1830)){
 				right: calc((40% - 735px)/ 1);
 			}
-	  
 		}
     }
 	&__our-services {
@@ -274,4 +274,9 @@ body {
 		
 		
     }
+	&__service {
+		
+    }
 }
+
+

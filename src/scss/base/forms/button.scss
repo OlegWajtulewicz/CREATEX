@@ -8,6 +8,7 @@
 	@include adaptiveValue("padding-left", 40, 25);
 	@include adaptiveValue("font-size", 16, 14);
 	align-items: center;
+	white-space: nowrap;
 	color: #fff;
 	background: $primary;
 	text-align: center;
@@ -26,6 +27,7 @@
 		width: 100%;
 	}
 	&-outline {
+		white-space: nowrap;
 		display: inline-flex;
 		background-color: transparent;
 		border: 1px solid $primary;

@@ -23,6 +23,7 @@
 		width: rem(130);
 		height: rem(22);
 		z-index: 5;
+		margin-right: rem(10);
 		svg {
 			width: rem(130);
 			height: rem(22);
@@ -109,6 +110,7 @@
 	// .menu-top-header__link
 
 	&__link {
+		white-space: nowrap;
 		color: #ffffff;
 		opacity: .6;
 		transition: all .3s ease 0s;

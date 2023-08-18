@@ -341,7 +341,16 @@
     @include adaptiveValue("padding-top", 90, 30);
     @include adaptiveValue("padding-bottom", 90, 30);
     // .services__container
-
+    .content-tabs {
+        padding-left: 0;
+        padding-right: 0;
+        .services-optimization__container {
+            padding: 0;
+        }
+        .services-our__container {
+            padding: 0;
+        }
+    }
     
 
     &__title {
@@ -724,7 +733,6 @@ details > summary:first-of-type {
         color:  #FFF;
         font-weight: 400;
         line-height: 160%; /* 25.6px */
-        opacity: 0.6;
         padding: 0.8125rem 1rem;
         border-radius: 0.25rem;
         border: 0.0625rem solid rgba(255, 255, 255, 0.20);

@@ -1,6 +1,6 @@
-.service-inner {
-    background: url('@img/service_page/bg.jpg') center / cover no-repeat;
-   // .service-inner__container
+.case-studies {
+    background: url('@img/case-studies_page/bg.jpg') center / cover no-repeat;
+    // .services-inner__container
     @include adaptiveValue("padding-top", 152, 100);
     @include adaptiveValue("padding-bottom", 120, 30);
     &__container {
@@ -8,9 +8,6 @@
         flex-direction: column;
         align-items: center;
     }
-
-    
-
     // .services-inner__title
 
     &__title {
@@ -29,6 +26,24 @@
         margin-bottom: em(40, 20);
     }
 
+    // .services-inner__buttons
+
+    // &__buttons {
+    //     display: flex;
+    //     align-items: center;
+    //     gap: rem(40);
+    //     @media (max-width: $mobileSmall) {
+    //        flex-direction: column;   
+    //     }
+    // }
+
+    // .services-inner__button
+
+    // &__button {
+    //     color: #fff;
+    //     border-color: #fff;
+        
+    // }
 
 }
 // .button-inner {
@@ -120,7 +135,7 @@
 //================================================================================ 
 
 
-.form-service {
+.form-case-studies {
 
     &__button {
         white-space: nowrap;
@@ -133,16 +148,13 @@
         }
     }
     .form__input {
-        width: rem(389);
+        width: rem(445);
         border-radius: 0.25rem 0 0 0.25rem;
         border-right: none;
         &._form-focus {
-            border-radius: 4px;
+            border-radius: 0.25rem 0 0 0.25rem;
             border: 1px solid rgba(255, 255, 255, 0.20);
             background: rgba(255, 255, 255, 0.12);
-        }
-        &._form-error {
-            color: #FF4242;
         }
         @media (max-width: $mobile) {
             border-radius: 0.25rem;
@@ -152,15 +164,300 @@
         }
     }
     .form__row {
+        position: relative;
         display: flex;
         @media (max-width: $mobile) {
             flex-direction: column;
             row-gap: rem(8);
         }
     }
+    .form__error {
+        color: #FF4242; 
+        position: absolute;
+        bottom: rem(-20);
+        left: 0;
+    }
 }
 
 //==================================================================================== 
+
+.case-studies-cases {
+    @include adaptiveValue("padding-top", 100, 30);
+    @include adaptiveValue("padding-bottom", 100, 30);
+    // .case-studies-cases__container
+
+    &__container {
+    }
+
+    // .case-studies-cases__tabs
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: rem(16);
+        transition: all .3s ease 0s;
+        svg {
+            height: rem(24);
+            width: rem(24); 
+        }
+        span {
+            color: #424551;
+            font-weight: 700;
+            line-height: 160%; /* 25.6px */
+            @media (any-hover: hover){
+                &:hover{
+                    color: #504AED;
+                }
+            }
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: #504AED;
+            }
+        }
+        
+    }
+
+    // .case-studies-cases__navigation
+
+    &__navigation {
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    // .case-studies-cases__title
+
+    &__title {
+        white-space: nowrap;
+        padding: 0.625rem 0.9375rem;
+        border: none;
+        color: #9A9CA5;
+        text-align: center;
+        font-weight: 700;
+        line-height: 160%; /* 25.6px */
+        transition: all .3s ease 0s;
+        &._tab-active {
+            border: 0.0625rem solid $primary;
+            color: $primary !important;
+            border-radius: 0.25rem;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: $textGray;
+            }
+        }
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+                width: 100%;
+                align-items: center;
+            } 
+        }
+    }
+}
+ 
+
+.all-cases-tab {
+    // .all-cases-tab__header
+    &__items {
+        @include adaptiveValue("padding-top", 60, 20);
+        @include adaptiveValue("padding-bottom", 60, 20);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        //column-gap: rem(30);
+        @include adaptiveValue("column-gap", 30, -10);
+        row-gap: rem(48);
+        height: auto;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;  
+        }
+    }
+
+    &__item {
+        border-radius: 4px;
+        border: 1px solid #E5E8ED;
+        background: #FFF;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+    }
+    
+
+    &__header {
+        padding: rem(30) rem(0) rem(80) rem(40);
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/01.png') ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        position: relative;
+        border-radius: 4px 4px 0 0;
+    }
+
+    // .all-cases-tab__body
+
+    &__body {
+        padding: rem(24) rem(40);
+        display: flex;
+        gap: rem(32);
+        @include adaptiveValue("padding-left", 40, 10);
+        @include adaptiveValue("padding-right", 40, 15);
+    }
+
+    // .all-cases-tab__footer
+
+    &__footer {
+        
+    }
+}
+.body-tab {
+
+    .two {
+        display: none;
+    }
+    border-bottom: 0.0625rem solid rgba(218, 219, 221, 0.5);
+    width: 100%;
+    border-image: linear-gradient(285deg, rgba(218, 219, 221, 0) 0%, rgba(218, 219, 221, 0.5) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.5) 87.85%, rgba(218, 219, 221, 0) 100%);
+    border-image-slice: 1;
+    &.all-cases-tab__body {
+        @include adaptiveValue("column-gap", 32, 0);
+    }
+}
+.header-tab {
+    &--two {
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/02.png'); 
+    }
+    &--tree {
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/03.png');
+    }
+    &--four {
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/04.png');
+    }
+    &--five {
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/05.png'); 
+    }
+    &--six {
+        background-image: linear-gradient(rgb(31 33 43 / 61%),rgb(31 33 43 / 61%)), url('@img/case-studies_page/tabs/06.png');
+    }
+    
+
+    &__logo {
+        position: relative;
+        width: rem(120);
+        height: rem(80);
+        z-index: 31;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .header-tab__title
+
+    &__title {
+        color: #FFF;
+        font-size: 14px;
+        line-height: 150%; /* 21px */
+        position: relative;
+        z-index: 3;
+    }
+}
+
+
+
+
+
+.footer-tab {
+    padding: rem(20) rem(40) rem(28);
+    // .footer-tab__descr
+
+    &__descr {
+        color: #787A80;
+        line-height: 160%; /* 25.6px */
+        &:not(:last-child) {
+            padding-bottom: em(20, 16);
+        }
+    }
+
+    // .footer-tab__link
+
+    &__link {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        font-family: $fontFamily !important;
+        color: #1E212C;
+        font-weight: 700;
+        line-height: 160%; /* 25.6px */
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s ease 0s;
+        &::before{
+            font-family: 'icomoon' !important;
+            color: #7772F1;
+            font-size: 1.5rem;
+            transition: color 0.3s ease 0s;
+        }
+        @media (any-hover: hover){
+            &:hover {
+                &::before{
+                    color: #504AED;
+                    
+                }
+            }
+        }
+        @media (any-hover: hover){
+            &:hover{
+                color: #787A80;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .service-successful {
     @include adaptiveValue("padding-bottom", 90, 20);

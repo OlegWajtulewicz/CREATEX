@@ -917,22 +917,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //================================================================================ 
-const menuLinks = document.querySelectorAll('nav ul li a summary');
+// const menuLinks = document.querySelectorAll('.menu-top-header__link');
 
-function showActivePunkt() {
-    const currentPathname = window.location.pathname;
+// function showActivePunkt() {
+//     const currentPathname = window.location.pathname;
 
-    menuLinks.forEach(menuLink => {
-        const navLinkPathname = new URL(menuLink.href).pathname;
+//     menuLinks.forEach(menuLink => {
+//         const navLinkPathname = new URL(menuLink.href).pathname;
 
-        if (currentPathname === navLinkPathname) {
-            menuLink.classList.add("active");
-        } else {
-            menuLink.classList.remove("active");
-        }
-    });
+//         if (currentPathname === navLinkPathname) {
+//             menuLink.classList.add("active");
+//         } else {
+//             menuLink.classList.remove("active");
+//         }
+//     });
+// }
+
+// showActivePunkt(); // Вызов функции при загрузке страницы
+
+// window.addEventListener('scroll', showActivePunkt); // Добавляем обработчик события прокрутки
+
+
+//=========== video ======================================================================================
+
+const videoBlock = document.querySelector('.video-block__body');
+
+
+if (videoBlock) {
+  const video = videoBlock.querySelector('video');
+  const playBtn = videoBlock.querySelector('.video-block__play');
+
+  playBtn.addEventListener('click', () => {
+    videoBlock.classList.add('video-block--played');
+    video.play();
+    video.controls = true;
+    playBtn.classList.add('video-block__play--played');
+  });
+
+  video.onpause = function() {
+    videoBlock.classList.remove('video-block--played');
+    video.controls = false;
+    playBtn.classList.remove('video-block__play--played');
+  };
+
 }
-
-showActivePunkt(); // Вызов функции при загрузке страницы
-
-window.addEventListener('scroll', showActivePunkt); // Добавляем обработчик события прокрутки

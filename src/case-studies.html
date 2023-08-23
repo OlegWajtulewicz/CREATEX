@@ -27,11 +27,11 @@
                             We help our clients get better results with our creative and data-driven approach to online advertising. View our case study portfolio and learn more about the process that sets us apart.
                         </div>
 
-                        <form action="#" class="case-studies__form form-case-studies sliding-left_full-sliding animation nth-increment ">
+                        <form data-ajax data-validate data-required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="case-studies__form form-case-studies sliding-left_full-sliding animation nth-increment ">
                             <div class="form__item ">
                                 <label for="subscribe-input" class="form__label">Email</label>
-                                <div class="form__row ">
-                                    <input id="subscribe-input" autocomplete="off" type="text" name="form[]" data-error="Error" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
+                                <div class="form__row ">     
+                                    <input id="subscribe-input" type="text" name="email" data-error="Error" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
                                     <button type="submit" class="form-case-studies__button button">Subscribe</button>
                                 </div>
 
@@ -1835,7 +1835,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-
+        @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

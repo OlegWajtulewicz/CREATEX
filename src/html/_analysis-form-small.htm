@@ -2,25 +2,25 @@
     <div class="analysis-form-small__container">
        <h3 class="analysis-form-small__title services-title lifting animation nth-increment">Get a Free SEO Analysis!</h3> 
        <div class="analysis-form-small__row small-form">
-        <form  data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form lifting animation nth-increment">
+        <form data-ajax data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form lifting animation nth-increment">
             <div class="form-form">
 
             
             <div class="form__item">
                 <label for="name" class="form__label">Name</label>
-                <input type="text" id="name" name="name"  required placeholder="Your name" class="form__input input  _req" > 
+                <input type="text" id="name" name="name" data-error="Error" required placeholder="Your name" class="form__input input  _req" > 
             </div>
 
 
             <div class="form__item">
                 <label for="email" class="form__label">Email</label>
-                <input id="email" type="email" name="email"  required placeholder="Your working email" class="form__input input _req" >
+                <input id="email" type="email" name="email" data-error="Error" required placeholder="Your working email" class="form__input input _req" >
             </div>
             
 
-            <div class="form__item" data-error="Error">
+            <div class="form__item" >
                 <label for="url" class="form__label">Your website URL</label>
-                <input type="url" name="url" id="url" required placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input _req" />
+                <input data-error="Error" type="url" name="url" id="url" required placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input _req" />
             </div>
 
             

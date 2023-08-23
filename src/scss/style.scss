@@ -170,6 +170,7 @@ body {
 @import "services";
 @import "service";
 @import "case-studies";
+@import "about-us";
 
 
 
@@ -259,7 +260,7 @@ body {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: -1;
-			@media (max-width: rem(1630)){
+			@media (max-width: rem(1630)) {
 				left: calc((40% - 655px)/ 1);
 			}
 	  
@@ -280,6 +281,14 @@ body {
 		
     }
 	&__case-studies {
+    }
+
+	&__about-us {
+    }
+	&__core-values {
+    }
+
+	&__seo-agency {
     }
 }
 

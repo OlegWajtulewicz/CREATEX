@@ -10,30 +10,30 @@
 		
 					<summary data-spoller data-spoller-close class="analysis-form__title title-section icon-Right-chevron lifting animation nth-increment">Get a Free SEO Analysis!</summary>
 					<div class="spoller-body">
-						<form  data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form lifting animation nth-increment">
+						<form data-ajax data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form lifting animation nth-increment">
                             <div class="form-form">
 
                             
 							<div class="form__item">
                                 <label for="name" class="form__label">Name</label>
-                                <input type="text" id="name" name="name"  placeholder="Your name" class="form__input input  _req" required> 
+                                <input type="text" id="name" name="name"  placeholder="Your name" class="form__input input " required> 
                             </div>
 
 
                             <div class="form__item">
                                 <label for="email" class="form__label">Email</label>
-                                <input id="email" type="email" name="email" placeholder="Your working email" class="form__input input _req" required>
+                                <input required id="email" type="email" name="email" placeholder="Your working email" class="form__input input " >
                             </div>
                             
             
-                            <div class="form__item long" data-error="Error">
+                            <div class="form__item long">
                                 <label for="url" class="form__label">Your website URL</label>
-                                <input type="url" name="url" id="url"  placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input _req" required/>
+                                <input required type="url" name="url" id="url"  placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input " />
                             </div>
 
 							<div class="checkbox-form__body lifting animation nth-increment">
 								<label class="form__checkbox checkbox-form">
-									<input type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req" required>
+									<input required data-error="Error" type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input ">
 									<span class="checkbox-form__text">I agree to receive communications from Createx SEO Agency</span>
 								</label>
 								<button class="checkbox-form__button button">Get a free analysis</button>

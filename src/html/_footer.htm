@@ -72,10 +72,10 @@
 				<div class="body-footer__item item-footer subscribe">
 					<div class="item-footer__newsletter newsletter-item">
 						<div class="item-footer__title">SIGN UP TO OUR NEWSLETTER</div>
-						<form action="#" class="newsletter-item__body">
+						<form data-ajax data-validate data-required required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="newsletter-item__body">
 							
 							<div class="newsletter-item__line">
-								<input id="subscribe-input" autocomplete="off" type="text" name="form[]" data-error="Error" data-required="email" placeholder="Email address" class="newsletter-item__input input">
+								<input  type="text" name="email" action="files/sendmail/sendmail.php" data-required="email" data-error="Error" placeholder="Email address" class="newsletter-item__input input">
 								<button type="submit" class="newsletter-item__button icon-Right"></button>
 								
 							</div>

@@ -28,14 +28,14 @@
                         </div>
 
                         <div class="service-inner__form form-service sliding-left_full-sliding animation nth-increment ">
-                            <div class="form__item" data-error="Error">
+                            <form data-ajax data-validate data-required data-popup-message="#thanks"  action="files/sendmail/sendmail.php" method="POST" class="form__item" >
                                 <label for="url" class="form__label">Your website URL</label>
                                 <div class="form__row">
-                                    <input type="url" name="url" id="url"  placeholder="http://yoursite.com" pattern="https://.*" size="30" class="form__input input _req" required />
+                                    <input required type="url" name="url" id="url" data-error="Error" placeholder="http://yoursite.com" pattern="https://.*"  class="form__input input _req" />
                                     <button class="form-service__button button">Analyse your site</button>
                                 </div>
 
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </section>
@@ -186,7 +186,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-
+        @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

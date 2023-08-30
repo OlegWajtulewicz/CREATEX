@@ -186,7 +186,8 @@
         font-weight: 700;
         color: #fff;
         line-height: 150%; /* 24px */
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
+        cursor: pointer;
         transition: all .3s ease 0s;
         @media (max-width: rem(580)) {
            justify-content: space-between;   

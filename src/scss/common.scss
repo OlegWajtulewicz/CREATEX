@@ -177,9 +177,6 @@
 		}
 }
 
-
-
-
 //=============================================================================
 
 .studies-swiper-slide {
@@ -551,6 +548,7 @@
 
         }
         
+        
     }
 
     // .tabs-pricing__slider
@@ -770,8 +768,8 @@
 
     &__bg {
         position: absolute;
-        top: 145px;
-        bottom: -65px;
+        top: 9.0625rem;
+        bottom: -4.0625rem;
         left: 50%;
         transform: translateX(-50%);
         img {
@@ -894,7 +892,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        z-index: -1;
+        z-index: 0;
         @media (max-width: rem(1630)){
             left: calc((40% - 655px)/ 1);
         }
@@ -1068,7 +1066,7 @@
         font-family: $fontFamily !important;
         font-size: 0.875rem;
         line-height: 150%; /* 21px */
-        
+        white-space: nowrap;
     }
 
     // .row-item__date
@@ -1078,6 +1076,7 @@
         display: flex;
         align-items: flex-end;
         font-family: $fontFamily !important;
+        white-space: nowrap;
         &::before {
             font-family: 'icomoon' !important;
             font-size: rem(16);

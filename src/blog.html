@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" >
+	@@include('html/_head.htm',{
+	"title":"Blog"
+	})
+	<body>
+		<div class="wrapper" >
+			@@include('html/_header.htm',{})
+			<main class="page page_blog">
+				<section class="page__blog blog">
+                    <div class="blog__container">
+                        <nav class="blog__breadcrumbs breadcrumbs sliding-left_full-sliding animation nth-increment">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a href="https://vaitulevichaleh.com/createx" class="breadcrumbs__link icon-Home"></a>
+                                </li>
+                                <!-- <li class="breadcrumbs__item">
+                                    <a href="./services" class="breadcrumbs__link">Case Studies</a>
+                                </li> -->
+                                <li class="breadcrumbs__item">
+                                    <a href="./blog" class="breadcrumbs__current">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="blog__title title-page sliding-left_full-sliding animation nth-increment">Blog</h1>
+                        <div class="blog__descr sliding-left_full-sliding animation nth-increment">
+                            Thoughts, trends and up-to-date news in search and digital marketing. Subsribe to our blog and receive latest news weekly.
+                        </div>
+
+                        <form data-required action="#" method="POST" class="blog__form form-blog sliding-left_full-sliding animation nth-increment ">
+                            <div class="form__item ">
+                               
+                                <div class="form__row ">     
+                                    <input autocomplete="off" type="text" name="form[]"  placeholder="Search the blog" class="form__input input"  />
+                                    <button type="submit" class="form-blog__button button">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="page__blog-latest latest-blog">
+                    <div class="latest-blog__container">
+                        <div class="latest-blog__list">
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <span class="item-news__latest">Latest Post</span>
+                                <div class="item-news__image">
+                                    <img src="@img/news/01.png" alt="01">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">SEO <span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">July 5, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Diane Mccoy</div></a>
+                                    
+                                </div>
+                                <h4 class="item-news__title">How to Maximize Your ROI Through Scientific SEM?</h4>
+                                
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+                
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <span class="item-news__latest">Latest Post</span>
+                                <div class="item-news__image">
+                                    <img src="@img/news/02.png" alt="02">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Marketing<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">July 5, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Diane Mccoy</div></a>
+                                </div>
+                                <h4 class="item-news__title">The Basics of Blogging Search Engine Optimization.</h4>
+                                
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+
+                        </div>
+                    </div>
+                </section>
+                <section class="page__blog-line line-blog">
+                    <div class="line-blog__container">
+                        <div class="line-blog__content">
+                            <div class="line-blog__list">
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/01.png" alt="01">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Marketing<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">July 12, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Soham Alexander</div></a>
+                                </div>
+                                <h4 class="item-news__title">Digital Marketing Game: What You Need to Know to Stay Ahead?</h4>
+                                <div class="item-news__descr">Nunc nulla vestibulum nunc quam arcu tristique convallis. Posuere augue pellentesque mauris gravida...</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/02.png" alt="02">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Ad Tips<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">June 6, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Shawn Edwards</div></a>
+                                </div>
+                                <h4 class="item-news__title">How to Evaluate and Compare Social Media Tools Today.</h4>
+                                <div class="item-news__descr">Eu donec pellentesque et aliquet. Fringilla morbi etiam turpis nisl nunc, quis sagittis ut. Pulvinar amet vitae..</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/03.png" alt="03">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">SEO<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">May 1, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Shawn Edwards</div></a>
+                                </div>
+                                <h4 class="item-news__title">The Best Practices to Optimize Your Website for Mobile.</h4>
+                                <div class="item-news__descr">Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/04.png" alt="04">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Paid Search<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">April 25, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Diane Mccoy</div></a>
+                                </div>
+                                <h4 class="item-news__title">10 Seriously Underused Paid Search Strategies.</h4>
+                                <div class="item-news__descr">Euismod congue faucibus diam etiam diam netus vitae ornare vitae. Cursus sollicitudin posuere venenatis...</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/05.png" alt="05">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Media & Press<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">June 3, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Shawn Edwards</div></a>
+                                </div>
+                                <h4 class="item-news__title">How to Create Content That Gets Linked and Shared.</h4>
+                                <div class="item-news__descr">Eu donec pellentesque et aliquet. Fringilla morbi etiam turpis nisl nunc, quis sagittis ut. Pulvinar amet vitae..</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+
+                            <article class="news__item item-news lifting nth-increment animation">
+                                <div class="item-news__image">
+                                    <img src="@img/blog_page/news/06.png" alt="06">
+                                </div> 
+                                <div class="item-news__row row-item">
+                                    <a href="#"><div class="row-item__tag">Ad Tips<span>|</span></div></a>
+                                    <div class="row-item__date icon-Clock">March 18, 2020</div><span>|</span>
+                                    <a href="#"><div class="row-item__autor icon-Profile">By Jane Cooper</div></a>
+                                </div>
+                                <h4 class="item-news__title">12 Simple Tips to Creating an Effective Ad.</h4>
+                                <div class="item-news__descr">Imperdiet risus consectetur dignissim lorem sollicitudin eget bibendum pellentesque nec. Adipiscing viverra in non euismod. Amet nulla aliquam nulla magna...</div>
+                                <a href="./single-post" class="item-news__link icon-Right">Read more</a>
+                            </article>
+                            </div>
+                            <div class="line-blog__pagging pagging sliding-right_full-sliding nth-increment animation">
+                                    <ul class="pagging__list">
+                                       <li class="pagging__item">
+                                        <a href="#" class="pagging__link _active">1</a>
+                                                </li> 
+                                        <li class="pagging__item">
+                                            <a href="#" class="pagging__link">2</a>
+                                                </li> 
+                                        <li class="pagging__item">
+                                            <a href="#" class="pagging__link">3</a>
+                                                </li> 
+                                        <li class="pagging__item">
+                                            <a href="#" class="pagging__link">4</a>
+                                                </li> 
+                                        <li class="pagging__item">
+                                            <a href="#" class="pagging__link">Next</a>
+                                                </li> 
+                                    </ul>
+                                    <button type="button" class="pagging__arrow icon-Right"></button>
+                            </div>
+                        </div>    
+                        <aside class="line-blog__aside aside">
+                            <div class="aside__categories">
+                           <div data-spollers="992,max" data-spollers-speed="300" class="spollers categories__spoller">
+                            <details class="categories__item">
+                                <summary class="categories__title icon-Right-chevron sliding-right nth-increment animation">Blog Categories</summary>
+                                <div class="categories__body ">
+                                    <div class="categories__table">
+                                        <a href="#"><div class="categories__label sliding-right nth-increment animation">All</div></a>
+                                        <div class="categories__value">25</div>
+                                        <a href="#"><div class="categories__label sliding-right nth-increment animation">Media & Press</div></a>
+                                        <div class="categories__value">3</div>
+                                        <a href="#"><div class="categories__label sliding-right nth-increment animation">Ad Tips</div></a>
+                                        <div class="categories__value">7</div>
+                                        <a href="#"><div class="categories__label _active sliding-right nth-increment animation">Marketing</div></a>
+                                        <div class="categories__value _active">4</div>
+                                        <a href="#"><div class="categories__label sliding-right nth-increment animation">SEO</div></a>
+                                        <div class="categories__value">9</div>
+                                        <a href="#"><div class="categories__label sliding-right nth-increment animation">Paid Search</div></a>
+                                        <div class="categories__value">2</div>
+                                    </div>
+                                </div>
+                            </details>
+                           </div> 
+                            </div>
+
+                            <div class="aside__trending">
+                            <div data-spollers="992,max" data-spollers-speed="300" class="spollers trending__spoller">
+                                <details class="trending__item">
+                                    <summary class="trending__title icon-Right-chevron sliding-right nth-increment animation">Now Trending</summary>
+                                    <div class="trending__body">
+                                        <div class="trending__list">
+                                            <div class="trending__item item-trending sliding-right nth-increment animation">
+                                                <div class="item-trending__image">
+                                                    <a href="./single-post"><img src="@img/blog_page/aside/01.png/" alt="01"></a>
+                                                </div>
+                                            <div class="item-trending__info">
+                                                <div class="item-trending__date icon-Clock">July 5, 2020</div>
+                                               <a href="./single-post">
+                                                    <div class="item-trending__title">5 Surprising Ways to Combine Content Marketing with PPC</div>
+                                               </a> 
+                                            </div>
+                                            </div>
+                                            <div class="trending__item item-trending sliding-right nth-increment animation">
+                                                <div class="item-trending__image">
+                                                    <a href="./single-post"><img src="@img/blog_page/aside/02.png" alt="02"></a>
+                                                </div>
+                                            <div class="item-trending__info">
+                                                <div class="item-trending__date icon-Clock">April 9, 2020</div>
+                                               <a href="./single-post">
+                                                    <div class="item-trending__title">Why SEO Is All About Content Marketing?</div>
+                                               </a> 
+                                            </div>
+                                            </div>
+                                            <div class="trending__item item-trending sliding-right nth-increment animation">
+                                                <div class="item-trending__image">
+                                                    <a href="./single-post"><img src="@img/blog_page/aside/03.png" alt="03"></a>
+                                                </div>
+                                                <div class="item-trending__info">
+                                                    <div class="item-trending__date icon-Clock">March 12, 2020</div>
+                                               <a href="./single-post">
+                                                    <div class="item-trending__title">10 tips for a small business digital marketing strategy</div>
+                                               </a> 
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </details>
+                            </div>
+                            </div>
+
+                            <div class="aside__categories">
+                                <div data-spollers="992,max" data-spollers-speed="300" class="spollers categories__spoller">
+                                 <details class="categories__item">
+                                    <summary class="categories__title icon-Right-chevron sliding-right nth-increment animation">Tags</summary>
+                                    <div class="categories__body sliding-right nth-increment animation">
+                                      <div class="categories__tabs-list">
+                                        
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#tips&tricks</a>
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#strategy</a>
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#SMM</a>
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#business</a>
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#PPC</a>
+                                            <a href="#" class="categories__tabs-link sliding-right nth-increment animation">#targeting</a>
+                                       
+                                      </div>   
+                                    </div>
+                                 </details>
+                                </div> 
+                            </div>
+
+                        </aside>
+                    </div>
+                </section>
+                <section class="page__subscribe-blog subscribe-blog">
+                   <div class="subscribe-blog__container">
+                    <div class="subscribe-blog__body">
+                        <h2 class="subscribe-blog__title title-section lifting animation nth-increment">Subscribe to our blog</h2>
+                        <div class="subscribe-blog__descr lifting animation nth-increment">And receive latest trends in search, marketing, digital and news.</div>
+
+                        <form data-ajax data-validate data-required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="case-studies__form form-case-studies lifting animation nth-increment ">
+                            <div class="form__item ">
+                                <label for="subscribe-input" class="form__label">Email</label>
+                                <div class="form__row ">     
+                                    <input  id="subscribe-input" type="text" name="email" data-error="Error" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
+                                    <button type="submit" class="form-case-studies__button button">Subscribe</button>
+                                </div>
+                                <div class="checkbox-form__body lifting animation nth-increment">
+                                    <label class="form__checkbox checkbox-form">
+                                        <input  data-error="Error" type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req">
+                                        <span class="checkbox-form__text">I agree to receive communications from Createx SEO Agency</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form> 
+
+                    </div>
+                    <div class="subscribe-blog__image sliding-right animation nth-increment">
+                        <img src="@img/blog_page/subscribe.png" alt="subscribe">
+                    </div>
+                   </div> 
+                </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+        @@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

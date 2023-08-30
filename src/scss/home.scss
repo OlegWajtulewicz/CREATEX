@@ -230,6 +230,8 @@
         font-size: rem(14);
         font-weight: 400;
         line-height: 150%; /* 21px */
+        max-width: rem(245);
+        text-align: left;
         
     }
 }
@@ -947,6 +949,7 @@ details > summary:first-of-type {
             color: $primary;
             font-size: rem(20);
             transition: transform 0.3s ease 0s;
+            height: rem(30);
         }
         &._spoller-active {
             &::before {

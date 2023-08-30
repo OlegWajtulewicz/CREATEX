@@ -200,6 +200,68 @@ function initSliders() {
 			},
 		})
 	}
+	//===================  our-team ===  mobile-slider ===================================
+
+	if (document.querySelector('.team-our__slider')) {
+		let mySwiper = null;
+		const slider = document.querySelector('.team-our__slider');
+		const mobileBreakpoint = 1080;
+	
+		function initializeSwiper() {
+			mySwiper = new Swiper(slider, {
+				modules: [Pagination, Navigation],
+				slidesPerView: 4,
+				spaceBetween: 30,
+				observer: true,
+				observeParents: true,
+				//autoHeight: true,
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				slideClass: 'team-our__slide',
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					480: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					767: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+				},
+				navigation: {
+					prevEl: '.swiper-button-prev',
+					nextEl: '.swiper-button-next',
+				},
+			});
+		}
+	
+		function destroySwiper() {
+			if (mySwiper !== null) {
+				mySwiper.destroy();
+				mySwiper = null;
+			}
+		}
+	
+		function handleResize() {
+			if (window.innerWidth <= mobileBreakpoint && !mySwiper) {
+				initializeSwiper();
+			} else if (window.innerWidth > mobileBreakpoint && mySwiper) {
+				destroySwiper();
+			}
+		}
+	
+		handleResize();
+		window.addEventListener('resize', handleResize);
+	}
+	//====================================================================================
+
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

@@ -171,6 +171,7 @@ body {
 @import "service";
 @import "case-studies";
 @import "about-us";
+@import "blog";
 
 
 
@@ -280,15 +281,38 @@ body {
 	&__service {
 		
     }
-	&__case-studies {
+	&_case-studies {
+		.partners,
+		.testimonials,
+		.news {
+			background: #F4F5F6;
+		}
     }
 
 	&__about-us {
     }
+	&_about-us {
+		.questions-btn {
+			@include adaptiveValue("padding-top", 40, 0);
+			&::before{
+				display: none;
+			}
+		}
+	}
 	&__core-values {
     }
 
 	&__seo-agency {
+    }
+	&__careers-at {
+    }
+
+	&_blog {
+
+	}
+	// .page__blog-latest
+
+    &__blog-latest {
     }
 }
 

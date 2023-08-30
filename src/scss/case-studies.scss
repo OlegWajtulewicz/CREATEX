@@ -271,7 +271,6 @@
         @include adaptiveValue("padding-bottom", 60, 20);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        //column-gap: rem(30);
         @include adaptiveValue("column-gap", 30, -10);
         row-gap: rem(48);
         height: auto;
@@ -281,10 +280,10 @@
     }
 
     &__item {
-        border-radius: 4px;
-        border: 1px solid #E5E8ED;
+        border-radius: 0.25rem;
+        border: 0.0625rem solid #E5E8ED;
         background: #FFF;
-        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        box-shadow: 0px 0.25rem 0.25rem -0.25rem rgba(30, 33, 44, 0.03), 0px 0.75rem 0.625rem -0.375rem rgba(154, 156, 165, 0.04), 0px 1.875rem 1.5rem -0.625rem rgba(154, 156, 165, 0.05), 0px 5rem 5rem -1.25rem rgba(154, 156, 165, 0.08);
 
     }
     
@@ -297,7 +296,7 @@
         background-repeat: no-repeat;
         z-index: 0;
         position: relative;
-        border-radius: 4px 4px 0 0;
+        border-radius: 0.25rem 0.25rem 0 0;
     }
 
     // .all-cases-tab__body
@@ -362,7 +361,7 @@
 
     &__title {
         color: #FFF;
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 150%; /* 21px */
         position: relative;
         z-index: 3;

@@ -988,7 +988,7 @@
 
     &__title {
         color: var(--gray-900, #1E212C);
-        font-size: 1.25rem;
+        @include adaptiveValue("font-size", 20, 18);
         font-weight: 700;
         line-height: 150%; /* 30px */
     }
@@ -1040,11 +1040,12 @@
 .row-item {
     display: flex;
     align-items: center;
-    color: var(--gray-700, #787A80);
-    font-size: 0.875rem;
+    color: #787A80;
+    @include adaptiveValue("font-size", 14, 12);
     line-height: 150%; /* 21px */
     font-family: $fontFamily !important;
     font-weight: 400;
+    margin-bottom: rem(8);
     span {
         @include adaptiveValue("margin-right", 12, 2);
         @include adaptiveValue("margin-left", 12, 2);
@@ -1064,7 +1065,7 @@
         display: flex;
         align-items: center;
         font-family: $fontFamily !important;
-        font-size: 0.875rem;
+        @include adaptiveValue("font-size", 14, 12);
         line-height: 150%; /* 21px */
         white-space: nowrap;
     }
@@ -1171,6 +1172,18 @@
 }
 .nth-increment:nth-child(6) {
     transition-delay: 0.6s;
+}
+.nth-increment:nth-child(7) {
+    transition-delay: 0.7s;
+}
+.nth-increment:nth-child(8) {
+    transition-delay: 0.8s;
+}
+.nth-increment:nth-child(9) {
+    transition-delay: 0.9s;
+}
+.nth-increment:nth-child(10) {
+    transition-delay: 1s;
 }
 
 //================================================================================= 
@@ -1509,6 +1522,7 @@ html.loaded {
         background: #F4F5F6;
         opacity: 1;
         width: 100%;
+        color: $mainColor;
     }
     .form__input._form__focus {
         border: 1px solid rgba(119, 114, 241, 0.40);

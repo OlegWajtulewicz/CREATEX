@@ -169,6 +169,8 @@ export function formSubmit() {
 			});
 		}
 	}
+	// Функция для обработки отправки формы ======================================================
+	
 	async function formSubmitAction(form, e) {
 		const error = !form.hasAttribute('data-no-validate') ? formValidate.getErrors(form) : 0;
 		if (error === 0) {
@@ -178,7 +180,6 @@ export function formSubmit() {
 				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
 				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
 				const formData = new FormData(form);
-
 				form.classList.add('_sending');
 				const response = await fetch(formAction, {
 					method: formMethod,

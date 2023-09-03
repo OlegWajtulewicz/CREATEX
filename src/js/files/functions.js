@@ -961,3 +961,77 @@ if (videoBlock) {
   };
 
 }
+
+//=========================  form - contacts  ============================================================================= 
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const tabButtons = document.querySelectorAll('.started-form__tabs-title');
+// 	const tabContents = document.querySelectorAll('.tabs__body');
+// 	const rangeSlider = document.getElementById('range');
+// 	const rangeFromInput = document.getElementById('range-from');
+// 	const rangeToInput = document.getElementById('range-to');
+  
+// 	tabButtons.forEach((button, index) => {
+// 	  button.addEventListener('click', () => {
+// 		// Переключение активного таба
+// 		tabButtons.forEach((btn) => btn.classList.remove('_tab-active'));
+// 		button.classList.add('_tab-active');
+  
+// 		// Переключение видимости таб-контента
+// 		tabContents.forEach((content) => content.style.display = 'none');
+// 		tabContents[index].style.display = 'block';
+// 	  });
+// 	});
+  
+	
+	
+// 	// Обработчик изменения значений слайдера
+// 	// rangeSlider.noUiSlider.on('update', (values, handle) => {
+// 	//   if (handle === 0) {
+// 	// 	rangeFromInput.innerText = values[0];
+// 	//   } else {
+// 	// 	rangeToInput.innerText = values[1];
+// 	//   }
+// 	// });
+  
+// 	// Обработчик отправки формы
+// 	const form = document.querySelector('.tab-body-form__form');
+// 	form.addEventListener('submit', (event) => {
+// 	  event.preventDefault();
+  
+// 	  // Получите значения из активного таба и слайдера
+// 	  const activeTabIndex = Array.from(tabButtons).findIndex((button) =>
+// 		button.classList.contains('_tab-active')
+// 	  );
+// 	  const selectedTab = tabButtons[activeTabIndex].innerText;
+// 	  const rangeFrom = rangeFromInput.innerText;
+// 	  const rangeTo = rangeToInput.innerText;
+  
+// 	  // Теперь у вас есть выбранный таб и значения слайдера, которые вы можете отправить на сервер.
+// 	  // Создайте объект FormData и добавьте в него данные из формы и табов.
+// 	  const formData = new FormData(form);
+// 	  formData.append('selected-tab', selectedTab);
+// 	  formData.append('range-from', rangeFrom);
+// 	  formData.append('range-to', rangeTo);
+  
+// 	  // Отправка данных на сервер
+// 	  fetch(form.action, {
+// 		method: 'POST',
+// 		body: formData
+// 	  })
+// 	//   .then(response => {
+// 	// 	if (response.ok) {
+// 	// 	  // Данные успешно отправлены
+// 	// 	  //alert('Данные успешно отправлены.');
+// 	// 	} else {
+// 	// 	  // Обработка ошибки при отправке данных
+// 	// 	  //alert('Произошла ошибка при отправке данных.');
+// 	// 	}
+// 	//   })
+// 	  .catch(error => {
+// 		// Обработка ошибки при выполнении запроса
+// 		console.error('error', error);
+// 	  });
+// 	});
+//   });
+
+  //================================================================================ 

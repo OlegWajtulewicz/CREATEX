@@ -1,7 +1,7 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
+			<button data-close type="button" class="popup__close icon-Cross"></button>
 			<div class="popup__text">
 				Text
 			</div>
@@ -9,15 +9,33 @@
 	</div>
 </div>
 
+<div id="video-popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper popup-video">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close icon-Cross"></button>
+			<div class="popup-video__body">
+				
+				
+			<video class="popup-video__content" controls muted loop preload="metadata">
+				<source src="@img/about-us_page/seo.mp4" type="video/mp4">
+			</video> 
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
 <div id="thanks" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">&times;</button>
+			<button data-close type="button" class="popup__close icon-Cross"></button>
 			 <div class="popup__text">
 				
 	<div class="modal__subtitle">Thanks! Your message was sent successfully.</div>
 	
-				
 			</div>  
 
 	

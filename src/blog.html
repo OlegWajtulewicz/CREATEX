@@ -220,7 +220,7 @@
                                         <div class="trending__list">
                                             <div class="trending__item item-trending sliding-right nth-increment animation">
                                                 <div class="item-trending__image">
-                                                    <a href="./single-post"><img src="@img/blog_page/aside/01.png/" alt="01"></a>
+                                                    <a href="./single-post"><img src="@img/blog_page/aside/01.png" alt="01"></a>
                                                 </div>
                                             <div class="item-trending__info">
                                                 <div class="item-trending__date icon-Clock">July 5, 2020</div>
@@ -287,16 +287,16 @@
                         <h2 class="subscribe-blog__title title-section lifting animation nth-increment">Subscribe to our blog</h2>
                         <div class="subscribe-blog__descr lifting animation nth-increment">And receive latest trends in search, marketing, digital and news.</div>
 
-                        <form data-ajax data-validate data-required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="case-studies__form form-case-studies lifting animation nth-increment ">
+                        <form data-ajax data-validate data-required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="subscribe-blog__form form-subscribe-blog lifting animation nth-increment ">
                             <div class="form__item ">
                                 <label for="subscribe-input" class="form__label">Email</label>
                                 <div class="form__row ">     
-                                    <input  id="subscribe-input" type="text" name="email" data-error="Error" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
-                                    <button type="submit" class="form-case-studies__button button">Subscribe</button>
+                                    <input required id="subscribe-input" type="text" name="email" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
+                                    <button type="submit" class="subscribe-blog__button button">Subscribe</button>
                                 </div>
                                 <div class="checkbox-form__body lifting animation nth-increment">
                                     <label class="form__checkbox checkbox-form">
-                                        <input  data-error="Error" type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req">
+                                        <input required type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req">
                                         <span class="checkbox-form__text">I agree to receive communications from Createx SEO Agency</span>
                                     </label>
                                 </div>

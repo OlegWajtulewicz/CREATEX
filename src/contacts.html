@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" >
+	@@include('html/_head.htm',{
+	"title":"Contacts"
+	})
+	<body>
+		<div class="wrapper" >
+			@@include('html/_header.htm',{})
+			<main class="page page_contacts">
+				<section class="page__contacts contacts">
+                    <div class="contacts__container">
+                        <nav class="contacts__breadcrumbs breadcrumbs sliding-left_full-sliding animation nth-increment">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a href="https://vaitulevichaleh.com/createx" class="breadcrumbs__link icon-Home"></a>
+                                </li>
+                                <!-- <li class="breadcrumbs__item">
+                                    <a href="./services" class="breadcrumbs__link">Case Studies</a>
+                                </li> -->
+                                <li class="breadcrumbs__item">
+                                    <a href="./contacts" class="breadcrumbs__current">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="contacts__title title-page sliding-left_full-sliding animation nth-increment">Contacts</h1>
+                        
+
+                        <div class="contacts__items items-contacts sliding-left_full-sliding animation nth-increment">
+							
+                            <div class="items-contacts__item item-contacts">
+								<div class="item-contacts__icon icon-outline"></div>
+
+								<div class="item-contacts__body">
+                                    <div class="item-contacts__title">Visit us</div>
+                                    <div class="item-contacts__adres">
+                                        <p>2464 Royal Ln. Mesa,</p>
+                                        <p>New Jersey 45463, USA</p>
+                                    </div>
+                                    <a href="#" class="item-contacts__link">See on the map</a>
+                                </div>
+							</div>
+
+                            <div class="items-contacts__item item-contacts ">
+                                <div class="item-contacts__icon icon-iPhone"></div>
+                                <div class="item-contacts__body">
+                                <div class="item-contacts__title">Call us</div>
+                                <ul class="item-contacts__phones">
+                                    <li class="item-contacts__phone"><a href="tel:4055550128" >(405) 555-0128</a></li>
+                                    <li class="item-contacts__phone"><a href="tel:6035550123" >(603) 555-0123</a></li>
+                                </ul> 
+                            </div>
+                            </div>
+
+                            <div class="items-contacts__item item-contacts ">
+                                <div class="item-contacts__icon icon-Chat"></div>
+                                <div class="item-contacts__body">
+                                <div class="item-contacts__title">Talk to us</div>
+                                <a href="mailto:hello@createx.com" class="item-contacts__post ">hello@createx.com</a>
+                                </div>
+                            </div>
+
+							<div class="items-contacts__item item-contacts">
+								<div class="item-contacts__icon icon-Clock"></div>
+
+								<div class="item-contacts__body">
+                                    <div class="item-contacts__title">Working Hours</div>
+                                    <div class="item-contacts__time">
+                                        <p>Mon-Fri: 9 am — 6 pm</p>
+                                        <p>Sat-Sun: days off</p>
+                                    </div>
+                                    
+                                </div>
+							</div>
+
+
+						</div>
+
+                        <!-- <form data-ajax data-validate data-required data-popup-message="#thanks" action="files/sendmail/sendmail.php" method="POST" class="case-studies__form form-case-studies sliding-left_full-sliding animation nth-increment ">
+                            <div class="form__item ">
+                                <label for="subscribe-input" class="form__label">Email</label>
+                                <div class="form__row ">     
+                                    <input id="subscribe-input" type="text" name="email" data-error="Error" data-required="email"  placeholder="Your working email" class="form__input input _req"  />
+                                    <button type="submit" class="form-case-studies__button button">Subscribe</button>
+                                </div>
+
+                            </div>
+                        </form> -->
+                    </div>
+                </section>
+                <section class="page__started-form started-form">
+                    <div class="started-form__container">
+                        <div class="started-form__form">
+                            <h2 class="started-form__title title-section lifting nth-increment animation">Ready to get started?</h2>
+                            <h4 class="started-form__subtitle-tabs lifting nth-increment animation">Services</h4>
+
+                                <div class="started-form__tab-body tab-body-form">
+                                    <div data-tabs class="started-form__tabs ">
+                                        <nav data-tabs-titles class="tabs__navigation started-form__tabs-navigation lifting nth-increment animation">
+                                            <button type="button" class="started-form__tabs-title _tab-active">Social Media</button>
+                                            <button type="button" class="started-form__tabs-title">SEO</button>
+                                            <button type="button" class="started-form__tabs-title">Research</button>
+                                            <button type="button" class="started-form__tabs-title">Content & PR</button>
+                                            <button type="button" class="started-form__tabs-title">Payed Traffic</button>
+                                        </nav>
+                                        <div data-tabs-body class="started-form__tabs-content">
+                                           <div class="tabs__body"></div> 
+                                           <div class="tabs__body"></div>
+                                           <div class="tabs__body"></div>
+                                           <div class="tabs__body"></div>
+                                           <div class="tabs__body"></div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-body-form__wrapper">
+                                        <form data-ajax data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="tab-body-form__form form">
+                                            <div class="form-form">
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="first-name" class="form__label">First Name*</label>
+                                                    <input type="text" id="first-name" name="first-name"  placeholder="Your first name" class="form__input input " required> 
+                                                </div> 
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="last-name" class="form__label">Last Name*</label>
+                                                    <input type="text" id="last-name" name="last-name"  placeholder="Your last name" class="form__input input " required> 
+                                                </div>
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="email" class="form__label">Email*</label>
+                                                    <input required id="email" type="email" name="email" placeholder="Your working email" class="form__input input " >
+                                                </div>
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="phone" class="form__label">Phone*</label>
+                                                    <input required type="tel" id="phone" name="phone" placeholder="Your phone number" class="form__input input">
+                                                </div>
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="company" class="form__label">Company</label>
+                                                    <input type="text" id="company" name="company" placeholder="Your company name" class="form__input input">
+                                                </div>
+
+                                                <div class="form__item lifting nth-increment animation">
+                                                    <label for="position" class="form__label">Position</label>
+                                                    <input required type="text" id="position" name="position" placeholder="Your position" class="form__input input">
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-body-form__filter lifting nth-increment animation">
+                                                <h4 class="tab-body-form__title">Approx. budget</h4>
+                                                <div id="range" data-from="32" data-to="81"></div>
+                                                <div id="range-values">
+                                                <span id="range-from"></span>
+                                                <span id="range-to"></span>
+                                                </div>
+                                             </div>
+
+                                             
+
+                                             <div class="form__item lifting nth-increment animation">
+                                                <label for="message" class="form__label">Additional Details</label>
+                                                <textarea id="message" name="message" placeholder="Your message" class="form__input input"></textarea>
+                                            </div>
+
+                                            <div class="checkbox-form__body lifting animation nth-increment">
+                                                <label class="form__checkbox checkbox-form">
+                                                    <input required data-error="Error" type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req">
+                                                    <span class="checkbox-form__text">I agree to receive communications from Createx SEO Agency</span>
+                                                </label>
+                                                <button class="checkbox-form__button button">Request a proposal</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            
+                        </div>
+
+
+
+                        <div class="started-form__image sliding-right nth-increment animation">
+                            <img src="@img/contacts_page/image-form.png" alt="1">
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <script>
+    document.addEventListener('DOMContentLoaded', () => {
+	const tabButtons = document.querySelectorAll('.started-form__tabs-title');
+	const tabContents = document.querySelectorAll('.tabs__body');
+	const rangeSlider = document.getElementById('range');
+	const rangeFromInput = document.getElementById('range-from');
+	const rangeToInput = document.getElementById('range-to');
+  
+	tabButtons.forEach((button, index) => {
+	  button.addEventListener('click', () => {
+		// Переключение активного таба
+		tabButtons.forEach((btn) => btn.classList.remove('_tab-active'));
+		button.classList.add('_tab-active');
+  
+		// Переключение видимости таб-контента
+		tabContents.forEach((content) => content.style.display = 'none');
+		tabContents[index].style.display = 'block';
+	  });
+	});
+  
+	
+	
+	// Обработчик изменения значений слайдера
+	// rangeSlider.noUiSlider.on('update', (values, handle) => {
+	//   if (handle === 0) {
+	// 	rangeFromInput.innerText = values[0];
+	//   } else {
+	// 	rangeToInput.innerText = values[1];
+	//   }
+	// });
+  
+	// Обработчик отправки формы
+	const form = document.querySelector('.tab-body-form__form');
+	form.addEventListener('submit', (event) => {
+	  event.preventDefault();
+  
+	  // Получите значения из активного таба и слайдера
+	  const activeTabIndex = Array.from(tabButtons).findIndex((button) =>
+		button.classList.contains('_tab-active')
+	  );
+	  const selectedTab = tabButtons[activeTabIndex].innerText;
+	  const rangeFrom = rangeFromInput.innerText;
+	  const rangeTo = rangeToInput.innerText;
+  
+	  // Теперь у вас есть выбранный таб и значения слайдера, которые вы можете отправить на сервер.
+	  // Создайте объект FormData и добавьте в него данные из формы и табов.
+	  const formData = new FormData(form);
+	  formData.append('selected-tab', selectedTab);
+	  formData.append('range-from', rangeFrom);
+	  formData.append('range-to', rangeTo);
+  
+	  // Отправка данных на сервер
+	  fetch(form.action, {
+		method: 'POST',
+		body: formData
+	  })
+	//   .then(response => {
+	// 	if (response.ok) {
+	// 	  // Данные успешно отправлены
+	// 	  //alert('Данные успешно отправлены.');
+	// 	} else {
+	// 	  // Обработка ошибки при отправке данных
+	// 	  //alert('Произошла ошибка при отправке данных.');
+	// 	}
+	//   })
+	  .catch(error => {
+		// Обработка ошибки при выполнении запроса
+		console.error('error', error);
+	  });
+	});
+  }); 
+                </script>
+				
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+        @@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

@@ -676,6 +676,9 @@
             cursor: pointer;
         }
     }
+    .checkbox-form__text {
+        color: #FFF;
+    }
     
 }
 
@@ -740,9 +743,15 @@ details > summary:first-of-type {
         border: 0.0625rem solid rgba(255, 255, 255, 0.20);
         background: rgba(255, 255, 255, 0.12);
         &._form-focus {
-            border-radius: 0.25rem 0 0 0.25rem;
-            border: 1px solid rgba(255, 255, 255, 0.20);
-            background: rgba(255, 255, 255, 0.12);
+            color:  #000;
+            border-radius: 4px;
+		    border: 1px solid rgba(119, 114, 241, 0.40) !important;
+		    border-color: rgba(119, 114, 241, 0.40) !important;
+		    background: #FFF;
+		    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 
+					0px 12px 10px -6px rgba(119, 114, 241, 0.04), 
+					0px 30px 24px -10px rgba(119, 114, 241, 0.05), 
+					0px 80px 80px -20px rgba(119, 114, 241, 0.08) !important;
         }
         
     }

@@ -24,13 +24,19 @@
 	//Кому відправити
 	$mail->addAddress('vajoleg@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
-	$mail->Subject = 'Привет! CREATEX';
+	$mail->Subject = 'CREATEX';
 
 		//Тело письма
-		$body = '<h1>Встречай news!</h1>';
+		$body = '<h1>Встречай CREATEX!</h1>';
 	
 		if(trim(!empty($_POST['name']))){
-			$body .='<p>Имя: <strong>'.$_POST['name'].'</strong></p>';
+			$body .='<p>Name: <strong>'.$_POST['name'].'</strong></p>';
+		}
+		if(trim(!empty($_POST['first-name']))){
+			$body .='<p>First Name: <strong>'.$_POST['first-name'].'</strong></p>';
+		}
+		if(trim(!empty($_POST['last-name']))){
+			$body .='<p>Last Name: <strong>'.$_POST['last-name'].'</strong></p>';
 		}
 		if(trim(!empty($_POST['email']))){
 			$body.='<p>E-mail: <strong>'.$_POST['email'].'</strong></p>';
@@ -46,6 +52,20 @@
 		}
 		if(trim(!empty($_POST['url']))){
 			$body.='<p>Your website URL: <strong>'.$_POST['url'].'</strong></p>';
+		}
+		if(trim(!empty($_POST['company']))){
+			$body .='<p>Company: <strong>'.$_POST['company'].'</strong></p>';
+		}
+		if(trim(!empty($_POST['position']))){
+			$body .='<p>Position: <strong>'.$_POST['position'].'</strong></p>';
+		}
+
+		// Добавляем данные из табов
+		if (!empty($_POST['selected-tab'])) {
+			$body .= '<p>Selected Tab: <strong>' . $_POST['selected-tab'] . '</strong></p>';
+		}
+		if (!empty($_POST['range-from']) && !empty($_POST['range-to'])) {
+			$body .= '<p>Range: <strong>' . $_POST['range-from'] . ' - ' . $_POST['range-to'] . '</strong></p>';
 		}
 		
 		// if(trim(!empty($_POST['hand']))){

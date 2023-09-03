@@ -40,7 +40,7 @@ flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
 flsFunctions.fullVHfix();
 /* Форматування чисел */
-// import './libs/wNumb.min.js';
+import './libs/wNumb.min.js';
 
 /*
 Модуль "Спойлери"
@@ -135,7 +135,7 @@ import "./files/forms/inputmask.js";
 Документація плагіна: https://refreshless.com/nouislider/
 Сніппет (HTML): range
 */
-// import "./files/forms/range.js";
+ import "./files/forms/range.js";
 
 /* Модуль роботи з підказками (tippy) */
 /*
